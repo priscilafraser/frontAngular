@@ -3,6 +3,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
+  //preparacao dos testes
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
@@ -14,6 +15,7 @@ describe('AppComponent', () => {
     }).compileComponents();
   });
 
+  //um teste un unitario
   it('should create the app', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;

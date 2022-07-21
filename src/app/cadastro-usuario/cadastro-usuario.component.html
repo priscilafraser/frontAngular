@@ -1,0 +1,14 @@
+<div class="container">
+    <h4>Cadastro de usuários</h4>
+
+<form #f="ngForm" (ngSubmit)="save(f.value)">
+    <input type="text" ngModel name="nome" placeholder="Informe nome">
+    <input type="email" ngModel name="email" placeholder="Informe email">
+    <input type="password" ngModel name="senha">
+    <input type="text" ngModel name="perfil" placeholder="Informe perfil">
+
+    <button>Salvar</button>
+
+</form>
+</div>
+

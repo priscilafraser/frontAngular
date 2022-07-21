@@ -1,0 +1,28 @@
+<p>cadastro works!</p>
+
+<form #f="ngForm" (ngSubmit)="saveContato(f.value)">
+    <input type="text" ngModel name="nome" placeholder="Informe nome">   <!-- os names tem que coincidir com o do db.json -->
+    <input type="number" ngModel name="idade" placeholder="Informe idade">
+    <input type="email" ngModel name="email" placeholder="Informe email">
+
+    <button>Salvar</button>
+    <label>{{msg}}</label>
+</form>
+
+<hr>    
+<table>
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Idade</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of contatos">
+            <td>{{p.nome}}</td>
+            <td>{{p.idade}}</td>
+            <td>{{p.email}}</td>
+        </tr>
+    </tbody>
+</table>
